@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header, section, footer {
+  width: 100%;
+  max-width: 800px;
+  padding: 2em 1em;
+}
+
+header {
+  background-color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+nav h1 {
+  font-size: 1.5em;
+  flex-grow: 1;
+  text-align: left;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  flex-grow: 2;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #00ffcc;
+  color: #000;
+}
+
+button {
+  margin-top: 1em;
+  padding: 0.6em 1.2em;
+  background-color: #00ffcc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #000;
+  font-weight: 700;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+button:hover {
+  background-color: #00ccaa;
+  color: #fff;
+}
+
+/* botao tema */
+#toggleTheme {
+  margin-top: 0;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.5em;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#toggleTheme:hover {
+  background-color: #00ffcc;
+  color: #000;
+}
+
+/* botao musica */
+#audioPlayer {
+  display: none;
+}
+
+#btnPlayMusic {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00ffcc;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5em;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+  z-index: 999;
+}
+
+#btnPlayMusic:hover {
+  background-color: #00ccaa;
+  color: #fff;
+}
+
+/* animação fade-in sequencial */
+header,
+section,
+footer {
+  opacity: 0;
+  transform: translateY(20px);
+  animation-fill-mode: forwards;
+  animation-name: fadeMove;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+}
+
+header {
+  animation-delay: 0.2s;
+}
+
+section:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+section:nth-of-type(2) {
+  animation-delay: 0.8s;
+}
+
+section:nth-of-type(3) {
+  animation-delay: 1.1s;
+}
+
+section:nth-of-type(4) {
+  animation-delay: 1.4s;
+}
+
+footer {
+  animation-delay: 1.7s;
+}
+
+@keyframes fadeMove {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* tema claro */
+body.light {
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+body.light header {
+  background-color: #ddd;
+}
+
+body.light nav a {
+  color: #222;
+}
+
+body.light nav a:hover {
+  background-color: #009977;
+  color: #fff;
+}
+
+body.light button,
+body.light #btnPlayMusic {
+  background-color: #009977;
+  color: #fff;
+}
+
+body.light button:hover,
+body.light #btnPlayMusic:hover {
+  background-color: #007755;
+  color: #eee;
+}
+
+/* botão play preto e branco */
+#btnPlayMusic {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+#btnPlayMusic:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+}
+
+/* hover suave nos h2 */
+section h2 {
+  transition: color 0.4s ease;
+  cursor: default;
+}
+
+section h2:hover {
+  color: #00ffcc;
+}
+
+#musica {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+#musica iframe {
+  max-width: 100%;
+}
+
+section.glow {
+  box-shadow: 0 0 12px 3px #00ffcc;
+  transition: box-shadow 0.4s ease;
+}
+
+#projetos ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
