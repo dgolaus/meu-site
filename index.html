@@ -69,3 +69,14 @@
     loading="lazy">
   </iframe>
 </section>
+
+<div id="contador">visitantes: 0</div>
+
+<script>
+  const contadorEl = document.getElementById('contador');
+  let count = localStorage.getItem('contadorFake');
+  if (!count) count = 0;
+  count++;
+  localStorage.setItem('contadorFake', count);
+  contadorEl.textContent = `visitantes: ${count}`;
+</script>
