@@ -1,3 +1,8 @@
+body {
+  font-family: 'Montserrat', 'Courier New', Courier, monospace;
+  /* ...restante do seu css... */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -62,14 +67,14 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #00ffcc;
+  background-color: #8400ff;
   color: #000;
 }
 
 button {
   margin-top: 1em;
   padding: 0.6em 1.2em;
-  background-color: #00ffcc;
+  background-color: #8400ff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -80,7 +85,7 @@ button {
 }
 
 button:hover {
-  background-color: #00ccaa;
+  background-color: #000000;
   color: #fff;
 }
 
@@ -99,7 +104,7 @@ button:hover {
 }
 
 #toggleTheme:hover {
-  background-color: #00ffcc;
+  background-color: #8400ff;
   color: #000;
 }
 
@@ -112,7 +117,7 @@ button:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #00ffcc;
+  background-color: #8400ff;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -228,7 +233,7 @@ section h2 {
 }
 
 section h2:hover {
-  color: #00ffcc;
+  color: #8400ff;
 }
 
 #musica {
@@ -243,7 +248,7 @@ section h2:hover {
 }
 
 section.glow {
-  box-shadow: 0 0 12px 3px #00ffcc;
+  box-shadow: 0 0 12px 3px #8400ff;
   transition: box-shadow 0.4s ease;
 }
 
@@ -253,6 +258,115 @@ section.glow {
   margin-left: 0;
 }
 
+.clips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  margin-top: 3em;
+  width: 100%;
+  max-width: 1200px;
+  justify-items: center;
+}
+.clips iframe, .clips video {
+  width: 100%;
+  max-width: 600px; /* aumente aqui, ex: 400px ou 450px */
+  height: 350px;    /* aumente aqui, ex: 250px ou 270px */
+  border-radius: 12px;
+  border: none;
+  background: #000;
+}
+
 body {
-  min-height: 200vh;
+  min-height: 90vh;
+}
+
+.medal-btn {
+  display: inline-block;
+  margin-top: 2em;
+  padding: 0.8em 2em;
+  background: #6b2bff;
+  color: #fff;
+  font-family: 'Courier New', Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px #0003;
+  letter-spacing: 1px;
+}
+.medal-btn:hover {
+  background: #000000;
+  color: #fff;
+}
+
+body {
+  /* ...seus estilos existentes... */
+  opacity: 0;
+  animation: fadeInBody 1s ease forwards;
+}
+
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.back-btn {
+  display: inline-block;
+  background: #222;
+  color: #fff;
+  font-family: 'Courier New', Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  padding: 0.6em 1.4em;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  margin: 2em 0 1em 0; /* <-- adiciona espaço acima */
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px #0003;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.back-btn:hover {
+  background: #ffffff;
+  color: #000;
+}
+
+#loader {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s;
+}
+
+#loader .spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #222;
+  border-top: 5px solid #ae00ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1em;
+}
+
+#loader span {
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }

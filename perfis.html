@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perfis</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .icons {
+      display: flex;
+      gap: 2.5rem;
+    }
+    .icons a img {
+      width: 64px;
+      height: 64px;
+      filter: brightness(0) invert(1);
+      transition: filter 0.2s;
+    }
+    .icons a img:hover {
+      filter: brightness(1) invert(0.5) sepia(1) hue-rotate(180deg) saturate(2);
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" style="position: absolute; top: 24px; left: 24px; color: #fff; text-decoration: none; font-size: 1.2em; background: #222; padding: 8px 18px; border-radius: 8px; border: none;">
+    ← voltar
+  </a>
+  <div class="icons">
+    <a href="https://www.instagram.com/dgolaus/" target="_blank" title="Instagram">
+      <img src="img/instagram.svg" alt="Instagram">
+    </a>
+    <a href="https://open.spotify.com/user/31zkzcchchgmxozrotx3anfhgle4?si=7b7166706c024b43" target="_blank" title="Spotify">
+      <img src="img/spotify.svg" alt="Spotify">
+    </a>
+    <a href="https://steamcommunity.com/id/trvpvibe/" target="_blank" title="Steam">
+      <img src="img/steam.svg" alt="Steam">
+    </a>
+    <a href="https://www.last.fm/pt/user/nots0da" target="_blank" title="Last.fm">
+      <img src="img/lastfm.svg" alt="Last.fm">
+    </a>
+  </div>
+</body>
+</html>

@@ -1,14 +1,14 @@
 ﻿# meu site
 
-👋 olá! este é meu portfólio online, feito com html, css e js.
+salve tropa, esse é meu portfólio online, feito com html, css e js (java).
 
 ## o que tem aqui?
 
 - sobre mim
-- minhas experiências (adobe photoshop, premiere, blender, fl studio)
-- projetos futuros (portfólio pessoal, jogo simples em js)
+- minhas experiências
+- projetos futuros
 - contato (email: dgtropa@gmail.com)
-- música rolando com embed do spotify 🎵
+- embed do spotify 🎵
 
 ## como ver?
 

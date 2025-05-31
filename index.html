@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Meu Portfólio</title>
+  <title>@dgolaus</title>
+  <link rel="icon" type="image/png" href="img/counterstrike.png" />
   <link rel="stylesheet" href="style.css" />
 
   <!-- preview pro discord (open graph) -->
@@ -13,31 +14,49 @@
   <meta property="og:url" content="https://dgolaus.github.io/meu-site/" />
   <meta name="twitter:card" content="summary_large_image" />
 </head>
+
+<script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      document.getElementById('loader').style.opacity = '0';
+      setTimeout(function() {
+        document.getElementById('loader').style.display = 'none';
+      }, 400);
+    }, 1000); // 1000 milliseconds = 1 second
+  });
+</script>
+
 <body>
+  <body>
+  <div id="loader">
+    <div class="spinner"></div>
+    <span>Carregando...</span>
+  </div>
+  <!-- ...restante do seu código... -->
+   
   <header>
-    <nav>
-      <h1>dev & dsn gráfico</h1>
-      <ul>
-        <li><a href="#sobre">sobre</a></li>
-        <li><a href="#experiencias">experiências</a></li>
-        <li><a href="#projetos">projetos</a></li>
-        <li><a href="#contato">contato</a></li>
-      </ul>
-      <button id="toggleTheme" aria-label="Alternar tema">🌙</button>
-    </nav>
+<nav>
+  <h1>@dgolaus</h1>
+<ul>
+  <li><a href="#sobre">sobre</a></li>
+  <li><a href="perfis.html">perfis</a></li>
+  <li><a href= "highlights.html">highlights</a></li>
+</ul>
+  <button id="toggleTheme" aria-label="Alternar tema">🌙</button>
+</nav>
   </header>
 
   <section id="sobre">
     <h2>sobre mim</h2>
-    <p>dev aprendiz aprendendo html & js</p>
+    <p>16 anos e peak platina 2 no valorant 😂</p>
   </section>
 
   <section id="experiencias">
     <h2>experiências</h2>
-    <p>🎨 adobe photoshop</p>
-    <p>🎞 adobe premiere</p>
-    <p>🛠 blender</p>
-    <p>🎵 fl studio</p>
+    <p>adobe photoshop</p>
+    <p>adobe premiere</p>
+    <p>blender</p>
+    <p>fl studio</p>
   </section>
 
   <section id="projetos">
@@ -51,7 +70,7 @@
   <section id="contato">
     <h2>contato</h2>
     <p>email: dgtropa@gmail.com</p>
-    <button onclick="window.open('https://sites.google.com/view/s0dasportfolio/portfolio/', '_blank')">explodir o país</button>
+    <button onclick="window.open('https://sites.google.com/view/s0dasportfolio/portfolio/', '_blank')">portfolio original</button>
   </section>
 
   <footer>
